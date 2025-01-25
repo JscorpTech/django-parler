@@ -1,24 +1,26 @@
 #!/usr/bin/env python
 import codecs
-import os
+
+# import os
 import re
-import sys
+
+# import sys
 from os import path
 
 from setuptools import find_packages, setup
 
 # When creating the sdist, make sure the django.mo file also exists:
-if "sdist" in sys.argv or "develop" in sys.argv:
-    os.chdir("parler")
-    try:
-        from django.core import management
+# if "sdist" in sys.argv or "develop" in sys.argv:
+#     os.chdir("parler")
+#     try:
+#         from django.core import management
 
-        management.call_command("compilemessages", stdout=sys.stderr, verbosity=1)
-    except ImportError:
-        if "sdist" in sys.argv:
-            raise
-    finally:
-        os.chdir("..")
+#         management.call_command("compilemessages", stdout=sys.stderr, verbosity=1)
+#     except ImportError:
+#         if "sdist" in sys.argv:
+#             raise
+#     finally:
+#         os.chdir("..")
 
 
 def read(*parts):
@@ -50,8 +52,8 @@ setup(
     long_description=read("README.rst"),
     author="Diederik van der Boor",
     author_email="opensource@edoburu.nl",
-    url="https://github.com/edoburu/django-parler",
-    download_url="https://github.com/edoburu/django-parler/zipball/master",
+    url="https://github.com/JscorpTech/django-parler",
+    download_url="https://github.com/JscorpTech/django-parler/zipball/main",
     packages=find_packages(exclude=("example*",)),
     include_package_data=True,
     test_suite="runtests",
