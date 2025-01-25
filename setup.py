@@ -35,7 +35,7 @@ def find_version(*parts):
 
 
 setup(
-    name="django-parler",
+    name="jst-parler",
     version=find_version("parler", "__init__.py"),
     license="Apache 2.0",
     install_requires=[
