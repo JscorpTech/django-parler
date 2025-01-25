@@ -39,7 +39,12 @@ setup(
     version=find_version("parler", "__init__.py"),
     license="Apache 2.0",
     install_requires=[
-        "Django>=2.2",
+        "django>=2.2",
+    ],
+    tests_require=[
+        "pytest",
+        "pytest-django",
+        "pytest-cov",
     ],
     description="Simple Django model translations without nasty hacks, featuring nice admin integration.",
     long_description=read("README.rst"),
